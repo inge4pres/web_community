@@ -1,4 +1,4 @@
-package community
+package model
 
 type Community struct {
 	Name       string
