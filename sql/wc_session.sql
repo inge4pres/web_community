@@ -1,0 +1,8 @@
+USE wc;
+CREATE TABLE wc_session (
+	id SERIAL PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	created TIMESTAMP NOT NULL DEFAULT NOW(),
+	user_id BIGINT NOT NULL,
+	session_id VARCHAR(1000) NOT NULL,
+	UNIQUE INDEX session_idx USING BTREE (id,user_id,session_id)
+);
